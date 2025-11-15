@@ -1,37 +1,73 @@
-# Text-to-speech-
-# DocuCast 🎙️📄
+🎙️ Text-to-Speech + DocuCast + Creative Script Generator
+AI-powered Audio Narration + Smart Summarization + Creative Voiceover Generation
 
-Transform any PDF document into a summarized, podcast-style audio file using AI-powered summarization and realistic text-to-speech synthesis (ElevenLabs API).
+DocuCast transforms your boring documents into engaging, podcast-style audio files, and now includes a creative script generation pipeline powered by Gemini API — perfect for turning documents into story-like, conversational summaries with hooks, emotion, and narration cues.
 
----
+🚀 Features
+📑 PDF Upload
 
-## 🚀 Features
+Upload any PDF — textbooks, research papers, notes, reports.
 
-- 📑 **PDF Upload**: Upload any PDF document.
-- 📝 **Text Extraction**: Extracts all textual content from the PDF.
-- 🤖 **AI Summarization**: Uses `facebook/bart-large-cnn` transformer to summarize large documents.
-- 🎤 **Dual Voice Audio**: Splits the summary into two parts and generates audio in two different voices via **ElevenLabs Text-to-Speech API**.
-- 🔊 **Audio Merging**: Combines both audio clips into a seamless podcast-like MP3 file.
-- 🎧 **Audio Playback**: Direct playback in Google Colab or download final podcast.
+📝 Text Extraction
 
----
+Extracts clean text from the entire PDF using PyMuPDF.
 
-## 🛠️ Tech Stack
+🤖 Smart Summarization
 
-- Python 3.x
-- Google Colab (for running the notebook)
-- [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) (for PDF text extraction)
-- [Transformers (Hugging Face)](https://huggingface.co/docs/transformers/index) (`facebook/bart-large-cnn` for summarization)
-- [Pydub](https://github.com/jiaaro/pydub) (for audio processing)
-- [ElevenLabs API](https://api.elevenlabs.io/) (for realistic voice synthesis)
-- FFmpeg (required by Pydub)
+Summarizes large documents using facebook/bart-large-cnn from Hugging Face.
 
----
+🧠 NEW — Creative Script Creator (Gemini AI)
 
-## 🔧 Installation & Requirements
+🔥 Adds an optional creative mode that converts the summary into a narrative-style script, including:
 
-Before running the notebook:
+Hooks
 
-```bash
+Storytelling flow
+
+Micro-examples
+
+Conversational tone
+
+Light humor
+
+Engaging pacing
+
+Scene cues
+
+Voice style tags
+
+This turns any boring document into a fun, podcast-like explanation.
+
+🎤 Dual-Voice Audio Generation
+
+Splits the script into two parts and generates natural-sounding audio using two different ElevenLabs voices.
+
+🎧 Podcast-Style Audio Merge
+
+Combines both audio clips into a seamless MP3 using Pydub, giving a dialogue-style or host + narrator vibe.
+
+🔊 Instant Playback
+
+Play the final audio directly in Google Colab or download it as a finished podcast.
+
+🛠️ Tech Stack
+
+Python 3.x
+
+Google Colab
+
+PyMuPDF → PDF text extraction
+
+Transformers (facebook/bart-large-cnn) → Summarization
+
+Gemini API → Creative narration script generation
+
+ElevenLabs API → Realistic TTS
+
+Pydub + FFmpeg → Audio processing
+
+Requests / JSON → API communication
+
+🔧 Installation & Requirements
 pip install pymupdf transformers requests pydub
 apt-get install ffmpeg
